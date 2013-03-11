@@ -1,0 +1,116 @@
+(7 hours) Time to learn about SL4A to see if I could use it for my project. Ran scripts, learned the interface. Read about the android facades available.
+Browsed through the novel: Pro Android Python with SL4A.
+
+(10 hours) With the realization that SL4A allowed for texts to be sent, I spent time seeing if one could compile it as an apk. Explored options using Eclipse ADT plug 
+in, command prompt building as described in Pro Android, online scripts. The challenge is you need to package not only the python, but the whole SL4A in the apk. 
+Kept perusing this but kept getting build errors after importing the SL4A code. Other people have done it. After too much time, advised to give up and work on project.
+
+(10 hours) Start to code. 
+Get basic texting scripts done. Get script to view texts, view contacts, print texts. Solid basic understanding with basic script.
+
+(11 hours) Start on GUI. Two methods. Webview (calls HTML,CSS,javascript file) or fullscreenwrapper (GUI module). Every example I see uses webview. Pursue webview.   
+Spend time trying to get webview examples found online to work. Try about 5-6. Time consuming. Do not work. Wonder if because code is wrong, uses old version of SL4A,
+other reason?
+Decide to try and run code on emulator. Attempt to get emulator working through Android SDK AVD Manager. Works but no internet connection. 
+Unknown cause. Therefore cannot get SL4A on emulator. 
+Try to reinstall SL4A and python.
+
+
+(12 hours)Decide I need to learn how HTML works to understand the code and perhaps see where it is going wrong. 
+Read tutorial on HTML, CSS and Javascript. Tutorials can be found on echoecho.com. Easy to understand of course time consuming.
+Understand HTML code. Do not understand why code does not work? Everything seems correct. Mess with code not that I understand it. 
+No luck. Try to reinstall SL4A and python. Nothing.
+Try instead of screen clicks, to hard code a command to print pre-determined string. Works! Why?
+
+
+(4 hours)While trying to figure out why script does not work, turn to forums for help. People provide basic scripts that work. 
+Does not work on my phone. Conclusion, webview does not work on phone and try fullscreenwapper(FSW). Lots of time wasted :/
+
+
+(5 hours)The python for FSW is simple. Breeze through example!
+GUI uses XML for android layout. Yay, another language to learn o.O
+Learn XML by visiting android developer pages:
+http://tinyurl.com/yj7ygbh
+http://tinyurl.com/cddz6kb
+etc…!	
+
+
+(4 hours)Trying to write paper. Having problems with buttons. I tried to use an example from online on creating a button. 
+Is the issue that it was defined in horizontal layout and I am using vertical?
+Figure out the issue. My wraps of width and height were wrong for vertical view. 
+Try to import pictures. Issues. Find resources online. 
+Wish to expand buttons horizontally and space them out. Make picture centered and larger. 
+Try different widths, gravities, weights. Different layouts and calls to picture fits. Margins finally work.
+Note: used density dependent pixels, margins, etc so may not work for other phones 
+Good resources to learn layout/ gravity:
+http://tinyurl.com/35lod7w
+http://tinyurl.com/b39ovno
+http://tinyurl.com/29eerpp
+
+
+
+
+(1.5 hour)EasyBlue hardware came. Don’t need to write code on computer and transfer to computer to test. Allows use of laptop mouse/keyboard as phone input!
+Start learning event handlers. Code quit botton (screen press) and back button (hard button press). 
+Have buttons load up dummy function. Code about loop. Change the titlelayout. Add about button and eventhandler. 
+
+
+(1.5 hour)Work on about layout XM and code to switch before title layout and about layout. Adjusted the gravity and layout to work. 
+Need to guess how to switch between layouts. Several attempts and get it. Can switch between title and about layout!
+XML Font info: http://tinyurl.com/bdrod23
+
+
+
+(2 hours)Wish to create scrollable contact view. Contact Façade gives me access to contact number/name. 
+How to make this work with XML? All example code online is java, java adapters, 
+fixed length lists of under 10 elements (my list has variable unknown length)	
+
+
+NOTE: Just stumbled upon fullscreenwrapper2. Released in August. I shall investigate as says it supports listView for XML. 
+Upset I did not find this before. More wasted time?
+“"It's just that given SL4A's architecture based on socket communication, you cannot really have the same programmatic/object access. 
+What FullScreenWrapper2 tries to do is to give you an emulated intuitive programmatic/object-like access to your Views and event handling 
+to simplify programming so you don't need to directly deal with SL4A event and full screen functions. The limitation of SL4A's FullScreenUI 
+architecture is that you can create your views only through loading XML layouts and not programmatically at any time."	
+
+
+(2.5 hours)Kind of upset when I learn I need to port all my code to this ned GUI module. Life o.O. 
+I look over example code and prefer its layout to FSW. 
+Work to get quit and back button to work in this new form. 
+
+
+(4 hours)Need to code other layouts and connect them. Figure out how to use newEvent handlers. 
+Took time to code other screens, esp send Text Screen. 
+Looks good but wish I could use more than XML layouts. Kinda dull o.O	
+
+
+(6 hours)Need to create contact chooser with the listView. No documentation provided except for its possible. Really? :/ 
+Time for brute force guess and check. 
+Figure out how to organize contacts, use list view, use event handler….took SOO long to figure out 	
+
+
+(1.5 hours)Wish for contact list to not only display names, but number and type (work, cell, etc). 
+Learn attributes of contact Façade. Android stores type as data2 and data2:1 = home,  data2:2=cell..etc 
+
+
+(1 hour)Need to now return the contact chosen to the send sms layout from the choose contact layout. 
+Expect this to be hard as call layouts, not load through a function. However, they are same class. 
+Unable to. Email developer of FSW2. He REPLIED! He says each layout is activity and cannot share variables between layouts. 
+Suggest to use database or global. Try global but keeps resetting itself. No luck. Come back to this. 
+Working with text façade. Issues converting to string. Texts stored an Unicode. Must turn to string and get rid of Unicode.
+
+
+(20 hours)Found a way around contact layout sharing event with sendsms layout. 
+Use popup dialog box on sms to display all contacts. Add features:
+Choose contact layout, choose multiple contacts, check if contacts picked and length less than 160 before sending, 
+dict to store texts and contact info (uses hash table so no more lag!), sort texts by person, data, open, unopen, speech recognition to input text, 
+spinner at startup with creating text/contact dictionaries, sort choose contact (as dict is usually unsorted). 
+Tried to add HTTP server functionality or backup docs to Google docs. Both are possible. 
+For some reason, I got the HTTP server to work but browser unable to go to site. 
+Friend says this occurs on CMU network. Unable to write to google docs. 
+Unsure why? Google issue and realize the files for the google docs api are out of date for SL4A. 
+Do not wish to replace them so… Project done as 1 day left?!!	
+
+
+Note: Funny momments in project: While adding above features. Instead of pulling numbers from chosen contacts, pulled from contacts list. 
+Send a large subset of my contacts ~(50 people) a text message. Had fun explaining why I sent  “Enter_SMS_Here”	
