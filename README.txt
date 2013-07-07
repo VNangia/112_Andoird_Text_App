@@ -7,6 +7,8 @@ Vivek Nangia
 NOTE: Project is PySMS.py. fullscreenwrapper2.py was not written by me but is needed to 
 run my file.
 
+ABOUT: pySMS is a SMS texting application written in python and xml. It uses a Google project: FullScreenWrapper2 that allows for a GUI and touch events. 
+
 
 CONTENTS
 I.    MINIMUM SYSTEM REQUIREMENTS
@@ -19,14 +21,14 @@ VII.  MORE INFORMATION ON FULLSCREENWRAPPER2
 
 
 I. MINIMUM SYSTEM REQUIREMENTS
-¥Android mobile dvice, mobile or tablet. Suggested Android version 2.2+
+ï¿½Android mobile dvice, mobile or tablet. Suggested Android version 2.2+
 
 II. ABOUT 
 This script is a simple SMS application that runs on an adroid device using 
 the sl4a application and Python4Andoird module. 
 
 III. HOW TO INSTALL sl4a
-¥ Make sure you are able to download applications from unknown sources. 
+ï¿½ Make sure you are able to download applications from unknown sources. 
 This setting can be found under application settings on the android phone.
 1)Navagate to (http://code.google.com/p/android-scripting/downloads/list)
 on your smart phone and download sl4a_r*.apk, where * denotes the
@@ -61,8 +63,8 @@ V.HOW TO RUN PySMS.py
 
 
 VI. MORE INFORMATION on sl4a
-¥http://code.google.com/p/android-scripting/
-¥http://code.google.com/p/android-scripting/wiki/TableOfContents?tm=6
+ï¿½http://code.google.com/p/android-scripting/
+ï¿½http://code.google.com/p/android-scripting/wiki/TableOfContents?tm=6
 
 VII. MORE INFORMATION ON FULLSCREENWRAPPER2
-¥http://code.google.com/p/python-for-android/wiki/fullscreenwrapper2
+ï¿½http://code.google.com/p/python-for-android/wiki/fullscreenwrapper2
